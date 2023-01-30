@@ -25,7 +25,11 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{ route('enrolement.store') }}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
+
+
                                                 <div class="form-group">
                                                     <p>Lettre adressée au DG, copie le ministre des affaires </p>
                                                     <input type="file" name="lettre" class="filestyle"
@@ -34,49 +38,50 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie des statuts notaries </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_statut" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p> Copie de l’Arrêté Ministériel des Affaires Sociales</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_arrete_aff_soc" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’Arrêté du Ministère de la Justice</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_arrete_justice" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         accept="application/pdf" required>
                                                 </div>
+
                                                 <div class="form-group">
                                                     <p>Copie du Plan d’Action pour l’année en cours</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_plan_action" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du rapport annuel d’activités </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_rapport_annuel" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du numéro d’impôt ;</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_numero_impot" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea class="form-control" rows="3" name="commentaires"
                                                         id="example-textarea-input"></textarea>
 
                                                 </div>
 
-                                                <button type="submit"
+                                                <button type="submit" id="sa-position"
                                                     class="btn btn-block btn-large btn-primary ">Envoyer <i
                                                         class="ion ion-md-paper-plane"></i></button>
 
@@ -142,7 +147,8 @@
 
 <!-- Bootstrap File Style -->
 <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
-
+<script src="assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/pages/sweet-alert.init.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>

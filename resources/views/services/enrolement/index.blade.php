@@ -50,6 +50,17 @@
 
 
                 </div>
+                @if (session('saved'))
+                <div class="alert alert-success alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <h3>Demande d'attestation d'enr$olement.</h3>
+                    <p>
+                        Votre demande été envoyée avec succès.
+                    </p>
+                </div>
+
+                @endif
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">

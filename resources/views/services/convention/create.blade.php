@@ -27,7 +27,9 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{route('convention.store')}}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="form-group">
                                                     <p>Lettre au Ministre des Affaires Sociales, Action Humanitaire et
                                                         Solidarité Nationale avec copie au Directeur/ </p>
@@ -37,27 +39,26 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation d’enrôlement au FNPSS </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_attest_enrolement" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du Plan d’Action pour l’année en cours</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_plan" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du rapport annuel d’activités de l’année écoulée </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_rapport" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         accept="application/pdf" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du projet ou programme social ou humanitaire concerné par
-                                                        le
-                                                        partenariat sollicité :</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                        le partenariat sollicité :</p>
+                                                    <input type="file" name="copie_projet" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
@@ -66,12 +67,12 @@
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea class="form-control" rows="3" name="commentaires"
                                                         id="example-textarea-input"></textarea>
 
                                                 </div>
 
-                                                <button type="submit"
+                                                <button type="submit" id="sa-position"
                                                     class="btn btn-block btn-large btn-primary ">Envoyer <i
                                                         class="ion ion-md-paper-plane"></i></button>
 
@@ -137,7 +138,8 @@
 
 <!-- Bootstrap File Style -->
 <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
-
+<script src="assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/pages/sweet-alert.init.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>

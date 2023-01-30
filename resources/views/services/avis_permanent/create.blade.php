@@ -33,23 +33,29 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{route('avispermanent.store')}}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="form-group">
                                                     <p>Lettre adressée au DG, copie le ministre des affaires </p>
                                                     <input type="file" name="lettre" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
+                                                /* 'lettre',
+                                                '',
+                                                '',
+                                                '', */
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation d’enrôlement au Fnpss</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="attestation" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation des biens à exonérés délivré par le Fnpss
                                                     </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="bien_exonerer" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
@@ -57,12 +63,12 @@
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea class="form-control" rows="3" name="commentaire"
                                                         id="example-textarea-input"></textarea>
 
                                                 </div>
 
-                                                <button type="submit"
+                                                <button type="submit" id="sa-position"
                                                     class="btn btn-block btn-large btn-primary ">Envoyer <i
                                                         class="ion ion-md-paper-plane"></i></button>
 
@@ -128,7 +134,8 @@
 
 <!-- Bootstrap File Style -->
 <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
-
+<script src="assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/pages/sweet-alert.init.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>

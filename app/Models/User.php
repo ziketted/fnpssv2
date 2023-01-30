@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'google_id',
+        'role_id',
     ];
 
     /**
@@ -41,4 +43,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function conventionUser()
+    {
+        return $this->hasMany(\App\Models\Convention::class);
+    }
+
+
+    public function enrolementUser()
+    {
+        return $this->hasMany(\App\Models\Enrolement::class);
+    }
+
+    public function exonerationUser()
+    {
+        return $this->hasMany(\App\Models\Exoneration::class);
+    }
+    public function notificationUser()
+    {
+        return $this->hasMany(\App\Models\Notification::class);
+    }
+    public function avisfavorableUser()
+    {
+        return $this->hasMany(\App\Models\Avisfavorable::class);
+    }
+    public function avispermanentUser()
+    {
+        return $this->hasMany(\App\Models\Avispermanent::class);
+    }
 }

@@ -33,7 +33,9 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{route('avisfavorable.store')}}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="form-group">
                                                     <p>Lettre adressée au DG, copie le ministre des affaires </p>
                                                     <input type="file" name="lettre" class="filestyle"
@@ -42,41 +44,34 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation d’enrôlement au Fnpss</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="attestation" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de la convention de partenariat avec le gouvernement de la
                                                         RDC.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="partenariat" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Liste des droits , taxes et redevances concernés par
                                                         l’exonération.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="liste" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         accept="application/pdf" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du projet ou programme social ou humanitaire concerné par
-                                                        la vente ou l’achat.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
-                                                        data-buttonname="btn-secondary" accept="application/pdf"
-                                                        required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <p>Copie du projet ou programme social ou humanitaire concerné par
                                                         l’exonération.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="projet" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie du rapport d’activités de l’année écoulée.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="rapport" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
@@ -84,19 +79,18 @@
                                                     <p>Copie du rapport concernant les exonérations des droits, taxes et
                                                         redevances
                                                         précédants la nouvelle demande et approuvée par le Fnpss.</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="rapport_exoneration" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea name="commentaire" class="form-control" rows="3"
                                                         id="example-textarea-input"></textarea>
-
                                                 </div>
 
-                                                <button type="submit"
+                                                <button type="submit" id="sa-position"
                                                     class="btn btn-block btn-large btn-primary ">Envoyer <i
                                                         class="ion ion-md-paper-plane"></i></button>
 
@@ -162,7 +156,8 @@
 
 <!-- Bootstrap File Style -->
 <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
-
+<script src="assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/pages/sweet-alert.init.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>

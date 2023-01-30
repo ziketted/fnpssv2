@@ -65,8 +65,17 @@
 
                     <div class="form-group text-center m-t-40">
                         <div class="col-12">
-                            <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Log
-                                In</button>
+                            <button class="btn btn-primary btn-block btn-lg waves-effect waves-light"
+                                type="submit">Login
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-40">
+                        <div class="col-12">
+                            <a href="{{ url('auth/google') }}"
+                                class="btn btn-danger btn-block btn-lg waves-effect waves-light" type="submit">
+                                <i class="ion ion-logo-googleplus"></i>
+                            </a>
                         </div>
                     </div>
 

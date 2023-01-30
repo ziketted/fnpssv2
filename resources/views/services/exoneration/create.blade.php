@@ -27,7 +27,10 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{route('exoneration.store')}}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
+
                                                 <div class="form-group">
                                                     <p>Lettre adressée au DG, copie le ministre des affaires </p>
                                                     <input type="file" name="lettre" class="filestyle"
@@ -35,40 +38,49 @@
                                                         required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <p>Copie de l’attestation des biens à exonérer </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <p>Copie de l’accord de siège
+                                                    </p>
+                                                    <input type="file" name="accord" class="filestyle"
+                                                        data-buttonname="btn-secondary" accept="application/pdf"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <p>Copie de l’attestation des biens à exonérer
+                                                    </p>
+                                                    <input type="file" name="attestation" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’avis favorable pour l’exonération du Min. sectoriel
                                                     </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_avis" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <p>Copie du projet d’utilisation du don ou des biens acquis</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <p>Projet d’utilisation du don ou des biens acquis
+                                                    </p>
+                                                    <input type="file" name="projet" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         accept="application/pdf" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Liste de colisage</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="liste_colisage" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de la lettre de transport maritime ( BL ) ou Aérien (LTA)
                                                         ou terrestre</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="transport" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation des dons ou la facture d’achat</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="facture" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
@@ -76,14 +88,15 @@
                                                     <p>Copie du rapport d’affectation des biens exonérés précedant la
                                                         nouvelle demande et
                                                         approuvée par le Fnpss</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="affectation" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
+
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea class="form-control" rows="3" name="commentaire"
                                                         id="example-textarea-input"></textarea>
 
                                                 </div>
@@ -127,7 +140,10 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="m-r-15">
-                                            <form>
+                                            <form action="{{route('exoneration.store')}}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
+
                                                 <div class="form-group">
                                                     <p>Lettre adressée au DG, copie le ministre des affaires </p>
                                                     <input type="file" name="lettre" class="filestyle"
@@ -137,48 +153,49 @@
                                                 <div class="form-group">
                                                     <p>Copie de l’accord de siège
                                                     </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="accord" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’avis favorable pour l’exonération du Min. sectoriel
                                                     </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="copie_avis" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Projet d’utilisation du don ou des biens acquis
                                                     </p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="projet" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         accept="application/pdf" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Liste de colisage</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="liste_colisage" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de la lettre de transport maritime ( BL ) ou Aérien (LTA)
                                                         ou terrestre</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="transport" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation des dons ou la facture d’achat</p>
-                                                    <input type="file" name="lettre" class="filestyle"
+                                                    <input type="file" name="facture" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
 
+
                                                 <div class="form-group">
                                                     <p>Notes (optionnel) : </p>
 
-                                                    <textarea class="form-control" rows="3"
+                                                    <textarea class="form-control" rows="3" name="commentaire"
                                                         id="example-textarea-input"></textarea>
 
                                                 </div>

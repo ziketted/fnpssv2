@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Avispermanent;
 use App\Http\Requests\StoreAvispermanentRequest;
 use App\Http\Requests\UpdateAvispermanentRequest;
@@ -34,11 +35,45 @@ class AvispermanentController extends Controller
      * @param  \App\Http\Requests\StoreAvispermanentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAvispermanentRequest $request)
+    public function store(Request $request, Avispermanent $avispermanent)
     {
-        //
-    }
 
+        /*  'lettre',
+        'attestation',
+        'bien_exonerer',
+        'commentaire', */
+        if ($request->hasFile('lettre')) {
+            $file = $request->file('lettre');
+            $filename = uniqid() . 'lettre' . auth()->user()->name . time() . '.' . $file->getClientOriginalExtension();
+            $filePath = public_path() . '/storage';
+            $file->move($filePath, $filename);
+            $request->lettre = $filename;
+        }
+        if ($request->hasFile('attestation')) {
+            $file = $request->file('attestation');
+            $filename = uniqid() . 'attestation' . auth()->user()->name . time() . '.' . $file->getClientOriginalExtension();
+            $filePath = public_path() . '/storage';
+            $file->move($filePath, $filename);
+            $request->attestation = $filename;
+        }
+        if ($request->hasFile('bien_exonerer')) {
+            $file = $request->file('bien_exonerer');
+            $filename = uniqid() . 'bien_exonerer' . auth()->user()->name . time() . '.' . $file->getClientOriginalExtension();
+            $filePath = public_path() . '/storage';
+            $file->move($filePath, $filename);
+            $request->bien_exonerer = $filename;
+        }
+
+
+
+        $avispermanent->lettre = $request->lettre;
+        $avispermanent->attestation = $request->attestation;
+        $avispermanent->bien_exonerer = $request->bien_exonerer;
+        $avispermanent->user_id = auth()->user()->id;
+        $avispermanent->commentaire = $request->commentaire;
+        $avispermanent->save();
+        return redirect()->route('avispermanent.index')->with('saved', 'Demande avispermanentsoumise avec succès');
+    }
     /**
      * Display the specified resource.
      *
