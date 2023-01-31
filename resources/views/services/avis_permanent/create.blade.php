@@ -42,10 +42,7 @@
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
                                                 </div>
-                                                /* 'lettre',
-                                                '',
-                                                '',
-                                                '', */
+
                                                 <div class="form-group">
                                                     <p>Copie de l’attestation d’enrôlement au Fnpss</p>
                                                     <input type="file" name="attestation" class="filestyle"

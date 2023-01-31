@@ -58,6 +58,8 @@
 
 <script src="{{asset('assets/pages/dashboard.js')}}"></script>
 
+<script src="assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/pages/sweet-alert.init.js"></script>
 <script src="{{asset('assets/js/app.js')}}"></script>
 
 </body>

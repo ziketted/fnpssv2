@@ -21,7 +21,7 @@ class EnrolementController extends Controller
         $check_active_document = new Enrolement();
         $actif = count($check_active_document->enrolement_encours());
         $enrolements = Enrolement::where('user_id',  auth()->user()->id)
-            ->orderBy('id', 'DESC')->take(1)->get();
+            ->orderBy('id', 'DESC')->get();
 
         return view('services.enrolement.index', [
             'enrolements' => $enrolements,
@@ -36,6 +36,7 @@ class EnrolementController extends Controller
      */
     public function create()
     {
+        return view('services.enrolement.create');
         //
     }
 
@@ -47,10 +48,7 @@ class EnrolementController extends Controller
      */
     public function store(Request $request,  Enrolement $enrolement)
     {
-        /* 'lettre',
-        '', 'copie_arrete_aff_soc', 'copie_arrete_justice',  '',
-        '',  '', 'attestation_enrolement','commentaires',
-        'notification',*/
+
         if ($request->hasFile('lettre')) {
 
             $file = $request->file('lettre');
@@ -174,5 +172,9 @@ class EnrolementController extends Controller
     public function destroy(Enrolement $enrolement)
     {
         //
+
+
+        $enrolement->delete();
+        return redirect()->route('enrolement.index')->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

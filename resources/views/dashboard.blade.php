@@ -161,30 +161,36 @@
                         <li class="menu-title">Menu principal</li>
 
                         <li>
-                            <a href="index.html" class="waves-effect"><i class="ti-home"></i><span> Tableau de bord
+                            <a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span> Tableau
+                                    de bord
                                     <span class="badge badge-primary float-right">1</span></span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Enrôlements
+                            <a href="{{route('enrolement.index')}}" class="waves-effect"><i
+                                    class="ion ion-ios-folder-open"></i><span> Enrôlements
                                 </span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Conventions
+                            <a href="{{route('convention.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Conventions
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Bien à
+                            <a href="{{route('bienexonerer.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Bien à
                                     eonérer
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Exonération
+                            <a href="{{route('exoneration.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Exonération
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Philantropie
+                            <a href="{{route('philantropie.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Philantropie
                                 </span></a>
                         </li>
 
@@ -192,8 +198,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-layout"></i><span> Les avis
                                 </span><span class="float-right"><i class="mdi mdi-plus"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="layouts-collapse.html">Avis favorable</a></li>
-                                <li><a href="layouts-smallmenu.html">Avis favorable permanent</a></li>
+                                <li><a href="{{route('avisfavorable.index')}}">Avis favorable</a></li>
+                                <li><a href="{{route('avispermanent.index')}}">Avis favorable permanent</a></li>
                             </ul>
                         </li>
 
@@ -232,7 +238,8 @@
                                     <div class="card-body">
 
                                         <p class="card-text">Attestation
-                                            d’enrôlement</p><a href="#" class="btn btn-primary">Commence par ici
+                                            d’enrôlement</p><a href="{{ route('enrolement.create') }}"
+                                            class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
                                 </div>
@@ -244,7 +251,8 @@
 
                                         <p class="card-text">Convention de
                                             partenariat avec le
-                                            gouvernement</p><a href="#" class="btn btn-primary">Commence par ici
+                                            gouvernement</p><a href="{{ route('convention.create') }}"
+                                            class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
                                 </div>
@@ -254,7 +262,8 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
                                         <p class="card-text">Attestation des biens à
-                                            exonérer</p><a href="#" class="btn btn-primary">Commence par ici
+                                            exonérer</p><a href="{{ route('bienexonerer.create') }}"
+                                            class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
                                 </div>
@@ -268,7 +277,8 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
                                         <p class="card-text">Certificat
-                                            d’Exonérations</p><a href="#" class="btn btn-primary">Commence par ici
+                                            d’Exonérations</p><a href="{{ route('exoneration.create') }}"
+                                            class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
                                 </div>
@@ -278,7 +288,8 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
                                         <p class="card-text">Certificat de
-                                            philanthropie</p><a href="#" class="btn btn-primary">Commence par ici
+                                            philanthropie</p><a href="{{ route('philantropie.create') }}"
+                                            class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
                                 </div>
@@ -290,8 +301,9 @@
                                         <p class="card-text">Arrêté ministériel portant avis
                                             favorable pour l’exonération des droits, taxes et redevances en
                                             faveur des projets sociaux et/ ou
-                                            d’assistance humanitaire à l’intérieur du pays</p><a href="#"
-                                            class="btn btn-primary">Commence par ici
+                                            d’assistance humanitaire à l’intérieur du pays</p><a
+                                            href="{{ route('avisfavorable.create') }}" class="btn btn-primary">Commence
+                                            par ici
                                         </a>
                                     </div>
                                 </div>
@@ -310,7 +322,8 @@
                                             l’exonération des droits, taxes et
                                             redevances en faveur des projets
                                             sociaux et/ ou d’assistance
-                                            humanitaire à l’importation</p><a href="#" class="btn btn-primary">Commence
+                                            humanitaire à l’importation</p><a href="{{ route('avispermanent.create') }}"
+                                            class="btn btn-primary">Commence
                                             par ici
                                         </a>
                                     </div>

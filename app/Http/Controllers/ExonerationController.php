@@ -17,6 +17,12 @@ class ExonerationController extends Controller
     public function index()
     {
         //
+        $exonerations = Exoneration::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.exoneration.index', [
+            'exonerations' => $exonerations,
+        ]);
     }
 
     /**

@@ -162,30 +162,36 @@
                         <li class="menu-title">Menu principal</li>
 
                         <li>
-                            <a href="index.html" class="waves-effect"><i class="ti-home"></i><span> Tableau de bord
+                            <a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span> Tableau
+                                    de bord
                                     <span class="badge badge-primary float-right">1</span></span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Enrôlements
+                            <a href="{{route('enrolement.index')}}" class="waves-effect"><i
+                                    class="ion ion-ios-folder-open"></i><span> Enrôlements
                                 </span></a>
                         </li>
 
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Conventions
+                            <a href="{{route('convention.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Conventions
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Bien à
+                            <a href="{{route('bienexonerer.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Bien à
                                     eonérer
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Exonération
+                            <a href="{{route('exoneration.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Exonération
                                 </span></a>
                         </li>
                         <li>
-                            <a href="calendar.html" class="waves-effect"><i class="ti-calendar"></i><span> Philantropie
+                            <a href="{{route('philantropie.index')}}" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Philantropie
                                 </span></a>
                         </li>
 
@@ -193,8 +199,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-layout"></i><span> Les avis
                                 </span><span class="float-right"><i class="mdi mdi-plus"></i></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="layouts-collapse.html">Avis favorable</a></li>
-                                <li><a href="layouts-smallmenu.html">Avis favorable permanent</a></li>
+                                <li><a href="{{route('avisfavorable.index')}}">Avis favorable</a></li>
+                                <li><a href="{{route('avispermanent.index')}}">Avis favorable permanent</a></li>
                             </ul>
                         </li>
 
