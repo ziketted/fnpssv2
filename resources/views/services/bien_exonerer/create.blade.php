@@ -119,9 +119,6 @@
 
     </div> <!-- content -->
 
-    <footer class="footer">
-        © 2023 <span class="d-none d-md-inline-block">Fnpss</span>
-    </footer>
 
 </div>
 <!-- End Right content here -->

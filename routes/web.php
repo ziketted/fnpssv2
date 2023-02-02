@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdministrationController;
 use TCG\Voyager\Voyager;
 use App\Models\Avisfavorable;
 use Illuminate\Support\Facades\Auth;
@@ -49,6 +50,7 @@ Route::name('enrolement.')->group(function () {
     Route::get('/enrolement/pay', [EnrolementController::class, 'pay'])->middleware(['auth'])->name('pay');
     Route::get('/enrolement/{enrolement}/edit/', [EnrolementController::class, 'edit'])->name('edit');
     Route::post('/enrolement/store', [EnrolementController::class, 'store'])->name('store');
+    Route::post('/enrolement/update', [EnrolementController::class, 'update'])->name('update');
     Route::get('/enrolement', [EnrolementController::class, 'create'])->name('create');
     Route::get('/enrolement/show/{enrolement}', [EnrolementController::class, 'show'])->name('show');
     Route::delete('/enrolement/{enrolement}', [EnrolementController::class, 'destroy'])->name('destroy');
@@ -106,4 +108,15 @@ Route::name('avispermanent.')->group(function () {
     Route::delete('/avispermanent/{avispermanent}', [AvispermanentController::class, 'destroy'])->name('destroy');
 });
 
+Route::name('administration.')->group(function () {
+    Route::get('/administration/panel', [AdministrationController::class, 'panel'])->name('panel');
+    Route::get('/administration/requerant', [AdministrationController::class, 'requerant'])->name('requerant');
+    Route::get('/bienexonereradmin/index', [AdministrationController::class, 'index_bienexonerer'])->name('index_bienexonerer');
+    Route::get('/enrolementadmin/index', [AdministrationController::class, 'index_enrolement'])->name('index_enrolement');
+    Route::get('/conventionadmin/index', [AdministrationController::class, 'index_convetion'])->name('index_convetion');
+    Route::get('/exonerationadmin/index', [AdministrationController::class, 'index_exoneration'])->name('index_exoneration');
+    Route::get('/philantropieadmin/index', [AdministrationController::class, 'index_philantropie'])->name('index_philantropie');
+    Route::get('/avisfavorableadmin/index', [AdministrationController::class, 'index_avisfavorable'])->name('index_avisfavorable');
+    Route::get('/avispermanentadmin/index', [AdministrationController::class, 'index_avispermanent'])->name('index_avispermanent');
+});
 require __DIR__ . '/auth.php';

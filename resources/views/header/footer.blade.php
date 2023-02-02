@@ -1,7 +1,3 @@
-<footer class="footer">
-    © 2022 <span class="d-none d-md-inline-block"> Blockchains RDC </span>
-</footer>
-
 </div>
 <script src="{{asset('assets/js/jquery.min.js')}}"></script>
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>

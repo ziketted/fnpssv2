@@ -33,6 +33,7 @@ class ExonerationController extends Controller
     public function create()
     {
         //
+        return view('services.exoneration.create');
     }
 
     /**
@@ -147,9 +148,10 @@ class ExonerationController extends Controller
      * @param  \App\Models\Exoneration  $exoneration
      * @return \Illuminate\Http\Response
      */
-    public function show(Exoneration $exoneration)
+    public function show($exoneration)
     {
-        //
+        $exonerationFind = Exoneration::where('id', $exoneration)->get();
+        return view('services.exoneration.show', ['exonerations' => $exonerationFind]);
     }
 
     /**
@@ -170,9 +172,10 @@ class ExonerationController extends Controller
      * @param  \App\Models\Exoneration  $exoneration
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateExonerationRequest $request, Exoneration $exoneration)
+    public function update(Request $request, Exoneration $exoneration)
     {
         //
+
     }
 
     /**
@@ -184,5 +187,8 @@ class ExonerationController extends Controller
     public function destroy(Exoneration $exoneration)
     {
         //
+        $exoneration->delete();
+        return redirect()->route('exoneration.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

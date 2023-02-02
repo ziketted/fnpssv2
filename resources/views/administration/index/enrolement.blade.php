@@ -2,7 +2,6 @@
 <div class="content-page">
     <!-- Start content -->
     <div class="content">
-
         <div class="">
             <div class="page-header-title">
                 <h4 class="page-title">Attestation
@@ -40,27 +39,22 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card m-b-30">
-
                             <div class="card-body">
-                                <a href="{{route('avisfavorable.create')}}" class="btn btn-danger">Nouvelle attestation
-                                    +
+                                <a href="{{route('enrolement.create')}}" class="btn btn-danger">Nouvelle attestation +
                                 </a>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 @if (session('saved'))
                 <div class="alert alert-info alert-dismissible fade show">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                             aria-hidden="true">×</span></button>
-                    <h3>Demande d'attestation de biens à exonérer.</h3>
+                    <h3>Demande d'attestation d'enrôlement.</h3>
                     <p class="text-secondary">
                         Votre demande été envoyée avec succès.
                     </p>
                 </div>
-
                 @endif
                 <div class="row">
                     <div class="col-lg-12">
@@ -76,26 +70,26 @@
                                         <tr>
                                             <th>N°</th>
                                             <th>Date soumission</th>
-                                            <th>Expéditeur</th>
+                                            <th>Validité</th>
                                             <th>Etat</th>
-                                            <th>Options</th>
+                                            <th>Start date</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
-                                        @foreach ($avisfavorables as $item)
+                                        @foreach ($enrolements as $item)
                                         <tr>
                                             <td>{{$item->id}}</td>
                                             <td>{{$item->created_at}}</td>
-                                            <td>Fnpss</td>
-                                            <td><small>{{$item->statut}}</small></td>
+                                            <td>{{$item->validite}}</td>
+                                            <td><span class="badge border-orange-300">{{$item->statut}}</span></td>
                                             <td>
-                                                <a href="{{route('avisfavorable.show',$item->id )}}"
+                                                <a href="{{route('enrolement.show',$item->id )}}"
                                                     class="btn btn-warning">Voir </a>
-                                                <a href="{{route('avisfavorable.edit',$item->id )}}"
+                                                <a href="{{route('enrolement.edit',$item->id )}}"
                                                     class="btn btn-primary">Modifier </a>
-                                                <form action="{{route('avisfavorable.destroy',$item->id )  }}"
+                                                <form action="{{route('enrolement.destroy',$item->id )  }}"
                                                     method="POST" style="display:inline;">
                                                     @method('DELETE')
                                                     @csrf
@@ -109,26 +103,15 @@
                                         @endforeach
 
                                     </tbody>
-
-
-
                                 </table>
 
                             </div>
                         </div>
                     </div>
-
                 </div> <!-- End Row -->
-
-
-
             </div><!-- container-fluid -->
-
         </div> <!-- Page content Wrapper -->
-
     </div> <!-- content -->
-
-
 </div>
 <!-- End Right content here -->
 

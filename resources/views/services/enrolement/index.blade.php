@@ -40,15 +40,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card m-b-30">
-                            <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
                             <div class="card-body">
-                                <a href="#" class="btn btn-danger">Nouvelle attestation +
+                                <a href="{{route('enrolement.create')}}" class="btn btn-danger">Nouvelle attestation +
                                 </a>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 @if (session('saved'))
                 <div class="alert alert-info alert-dismissible fade show">
@@ -59,7 +56,6 @@
                         Votre demande été envoyée avec succès.
                     </p>
                 </div>
-
                 @endif
                 <div class="row">
                     <div class="col-lg-12">

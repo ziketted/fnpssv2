@@ -6,6 +6,7 @@ use App\Models\Philantropie;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePhilantropieRequest;
 use App\Http\Requests\UpdatePhilantropieRequest;
+use App\Models\Bienexonerer;
 
 class PhilantropieController extends Controller
 {
@@ -16,6 +17,12 @@ class PhilantropieController extends Controller
      */
     public function index()
     {
+        $philantropies = Philantropie::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.philantropie.index', [
+            'philantropies' => $philantropies,
+        ]);
         //
     }
 
@@ -26,7 +33,7 @@ class PhilantropieController extends Controller
      */
     public function create()
     {
-        //
+        return view('services.philantropie.create');
     }
 
     /**
@@ -122,9 +129,10 @@ class PhilantropieController extends Controller
      * @param  \App\Models\Philantropie  $philantropie
      * @return \Illuminate\Http\Response
      */
-    public function show(Philantropie $philantropie)
+    public function show($philantropie)
     {
-        //
+        $philantropieFind = Philantropie::where('id', $philantropie)->get();
+        return view('services.philantropie.show', ['philantropies' => $philantropieFind]);
     }
 
     /**
@@ -158,6 +166,8 @@ class PhilantropieController extends Controller
      */
     public function destroy(Philantropie $philantropie)
     {
-        //
+        $philantropie->delete();
+        return redirect()->route('philantropie.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

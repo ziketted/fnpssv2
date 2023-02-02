@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Fnpss</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="Admin Dashboard" name="description" />
+    <meta content="Fnpss admin" name="description" />
     <meta content="ThemeDesign" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -30,7 +30,6 @@
     <link href="{{asset('assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css')}}"
         rel="stylesheet" />
 
-    <link href="{{asset('assets/plugins/sweetalert2/sweetalert2.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
@@ -164,44 +163,18 @@
                         <li>
                             <a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span> Tableau
                                     de bord
-                                    <span class="badge badge-primary float-right">1</span></span></a>
                         </li>
 
                         <li>
                             <a href="{{route('enrolement.index')}}" class="waves-effect"><i
-                                    class="ion ion-ios-folder-open"></i><span> Enrôlements
+                                    class="ion ion-ios-folder-open"></i><span> Requerants
                                 </span></a>
                         </li>
 
                         <li>
-                            <a href="{{route('convention.index')}}" class="waves-effect"><i
-                                    class="ti-calendar"></i><span> Conventions
+                            <a href="{{route('convention.index')}}" class="waves-effect"><i class="ti-bell"></i><span>
+                                    Notifications
                                 </span></a>
-                        </li>
-                        <li>
-                            <a href="{{route('bienexonerer.index')}}" class="waves-effect"><i
-                                    class="ti-calendar"></i><span> Bien à
-                                    exonérer
-                                </span></a>
-                        </li>
-                        <li>
-                            <a href="{{route('exoneration.index')}}" class="waves-effect"><i
-                                    class="ti-calendar"></i><span> Exonération
-                                </span></a>
-                        </li>
-                        <li>
-                            <a href="{{route('philantropie.index')}}" class="waves-effect"><i
-                                    class="ti-calendar"></i><span> Philantropie
-                                </span></a>
-                        </li>
-
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="ti-layout"></i><span> Les avis
-                                </span><span class="float-right"><i class="mdi mdi-plus"></i></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="{{route('avisfavorable.index')}}">Avis favorable</a></li>
-                                <li><a href="{{route('avispermanent.index')}}">Avis favorable permanent</a></li>
-                            </ul>
                         </li>
 
 

@@ -16,6 +16,12 @@ class AvisfavorableController extends Controller
      */
     public function index()
     {
+        $avisfavorables = Avisfavorable::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.avis_favorable.index', [
+            'avisfavorables' => $avisfavorables,
+        ]);
         //
     }
 
@@ -24,10 +30,13 @@ class AvisfavorableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function show($avisfavorable)
     {
         //
+        $avisFind = Avisfavorable::where('id', $avisfavorable)->get();
+        return view('services.avis_favorable.show', ['avisfavorables' => $avisFind]);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +44,10 @@ class AvisfavorableController extends Controller
      * @param  \App\Http\Requests\StoreAvisfavorableRequest  $request
      * @return \Illuminate\Http\Response
      */
-
+    public function create()
+    {
+        return view('services.avis_favorable.create');
+    }
 
     /**
      * Display the specified resource.
@@ -142,6 +154,8 @@ class AvisfavorableController extends Controller
      */
     public function destroy(Avisfavorable $avisfavorable)
     {
-        //
+        $avisfavorable->delete();
+        return redirect()->route('avisfavorable.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

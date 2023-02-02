@@ -16,7 +16,12 @@ class AvispermanentController extends Controller
      */
     public function index()
     {
-        //
+        $avispermanents = Avispermanent::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.avis_permanent.index', [
+            'avispermanents' => $avispermanents,
+        ]);
     }
 
     /**
@@ -39,10 +44,7 @@ class AvispermanentController extends Controller
     public function store(Request $request, Avispermanent $avispermanent)
     {
 
-        /*  'lettre',
-        'attestation',
-        'bien_exonerer',
-        'commentaire', */
+
         if ($request->hasFile('lettre')) {
             $file = $request->file('lettre');
             $filename = uniqid() . 'lettre' . auth()->user()->name . time() . '.' . $file->getClientOriginalExtension();
@@ -81,9 +83,11 @@ class AvispermanentController extends Controller
      * @param  \App\Models\Avispermanent  $avispermanent
      * @return \Illuminate\Http\Response
      */
-    public function show(Avispermanent $avispermanent)
+    public function show($avispermanent)
     {
         //
+        $avisFind = Avispermanent::where('id', $avispermanent)->get();
+        return view('services.avis_permanent.show', ['avispermanents' => $avisFind]);
     }
 
     /**
@@ -117,6 +121,8 @@ class AvispermanentController extends Controller
      */
     public function destroy(Avispermanent $avispermanent)
     {
-        //
+        $avispermanent->delete();
+        return redirect()->route('avispermanent.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

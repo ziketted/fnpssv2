@@ -16,7 +16,12 @@ class BienexonererController extends Controller
      */
     public function index()
     {
-        //
+        $bienexonerer = Bienexonerer::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.bien_exonerer.index', [
+            'bienexonerers' => $bienexonerer,
+        ]);
     }
 
     /**
@@ -26,7 +31,7 @@ class BienexonererController extends Controller
      */
     public function create()
     {
-        //
+        return view('services.bien_exonerer.create');
     }
 
     /**
@@ -99,9 +104,10 @@ class BienexonererController extends Controller
      * @param  \App\Models\Bienexonerer  $bienexonerer
      * @return \Illuminate\Http\Response
      */
-    public function show(Bienexonerer $bienexonerer)
+    public function show($bienexonerer)
     {
-        //
+        $bienexonererFind = Bienexonerer::where('id', $bienexonerer)->get();
+        return view('services.bien_exonerer.show', ['bienexonerers' => $bienexonererFind]);
     }
 
     /**
@@ -122,7 +128,7 @@ class BienexonererController extends Controller
      * @param  \App\Models\Bienexonerer  $bienexonerer
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateBienexonererRequest $request, Bienexonerer $bienexonerer)
+    public function update(Request $request, Bienexonerer $bienexonerer)
     {
         //
     }
@@ -136,5 +142,8 @@ class BienexonererController extends Controller
     public function destroy(Bienexonerer $bienexonerer)
     {
         //
+        $bienexonerer->delete();
+        return redirect()->route('exoneration.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

@@ -1,3 +1,8 @@
+@if(auth()->user()->role_id==1)
+<script>
+    window.location = "{{ route('administration.panel') }}";
+</script>
+@else
 <!doctype html>
 <html lang="en">
 
@@ -180,7 +185,7 @@
                         <li>
                             <a href="{{route('bienexonerer.index')}}" class="waves-effect"><i
                                     class="ti-calendar"></i><span> Bien à
-                                    eonérer
+                                    exonérer
                                 </span></a>
                         </li>
                         <li>
@@ -407,3 +412,4 @@
 </body>
 
 </html>
+@endif
