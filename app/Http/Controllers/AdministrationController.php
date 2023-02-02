@@ -61,7 +61,7 @@ class AdministrationController extends Controller
             'enrolements' => $enrolements,
             'enrolementAnnuler' => $enrolementAnnuler,
             'enrolementValider' => $enrolementValider,
-            'enrolementTotal' => $enrolementTotal
+            'enrolementTotal' => $exonerationTotal
         ]);
     }
     public function index_convention()
