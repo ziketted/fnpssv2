@@ -160,27 +160,24 @@
                     <ul>
                         <li class="menu-title">Menu principal</li>
 
-                        <li>
-                            <a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span> Tableau
-                                    de bord
-                        </li>
 
                         <li>
-                            <a href="{{route('enrolement.index')}}" class="waves-effect"><i
+                            <a href="{{route('dashboard')}}" class="waves-effect"><i
+                                    class="mdi mdi-view-comfy"></i><span>
+                                    Tableau de bord
+                                </span></a>
+                        </li>
+                        <li>
+                            <a href="{{route('administration.requerant')}}" class="waves-effect"><i
                                     class="ion ion-ios-folder-open"></i><span> Requerants
                                 </span></a>
                         </li>
 
                         <li>
-                            <a href="{{route('convention.index')}}" class="waves-effect"><i class="ti-bell"></i><span>
+                            <a href="#" class="waves-effect"><i class="ti-bell"></i><span>
                                     Notifications
                                 </span></a>
                         </li>
-
-
-
-
-
                     </ul>
                 </div>
                 <div class="clearfix"></div>

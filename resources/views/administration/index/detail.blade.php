@@ -19,9 +19,31 @@
                             <h5 class="card-header mt-0">Requerants</h5>
                             <div class="card-body">
 
-                                <p class="card-text">Total des requerants :
+                                <p class="card-text">Total:
                                     <span class="badge badge-primary">{{$userTotal}}</span>
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+                            <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
+                            <div class="card-body">
+
+                                <p class="card-text">Total attestation validée.
+                                    <span class="badge badge-success">15</span>
+                                </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+
+                            <div class="card-body">
+                                <a href="{{route('avisfavorable.create')}}" class="btn btn-danger">Nouvelle attestation
+                                    +
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +72,7 @@
 
 
                                     <tbody>
-                                        @foreach ($requrants as $item)
+                                        {{-- @foreach ($requrants as $item)
                                         <tr>
                                             <td>{{$item->id}}</td>
                                             <td>{{$item->name}}</td>
@@ -64,7 +86,7 @@
                                             </td>
 
                                         </tr>
-                                        @endforeach
+                                        @endforeach --}}
 
                                     </tbody>
 

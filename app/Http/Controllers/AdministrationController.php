@@ -15,6 +15,7 @@ class AdministrationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function panel()
     {
 
@@ -22,17 +23,25 @@ class AdministrationController extends Controller
     }
     public function requerant()
     {
-        $userTotal = Enrolement::where('role_id', '<>', 2)->count();
+        $userTotal = Enrolement::where('user_id', '<>', 2)->count();
         $requerants = User::where('role_id', '<>', '1')->get();
-        return view('administration.index.requerant', ['requrants' => $requerants]);
+        return view('administration.index.requerant', ['requrants' => $requerants, 'userTotal' => $userTotal,]);
+    }
+
+    public function detail($user)
+    {
+        $userTotal = Enrolement::where('user_id', '<>', 2)->count();
+        $users = User::where('id', $user)->get();
+        return view('administration.index.detail', ['requrants' => $users, 'userTotal' => $userTotal,]);
     }
 
     public function index_enrolement()
     {
         //
-        $enrolementTotal = Enrolement::where('role_id', '<>', 2)->count();
-        $enrolementAnnuler = Enrolement::where('statut', 'annulé')->where('role_id', '<>', 2)->count();
-        $enrolementValider = Enrolement::where('statut', 'validé')->where('role_id', '<>', 2)->count();
+        $enrolementTotal = Enrolement::all()->count();
+        $enrolementSoumis = Enrolement::where('statut', 'soumis')->where('user_id', '<>', auth()->user()->id)->count();
+        $enrolementAnnuler = Enrolement::where('statut', 'annulé')->where('user_id', '<>', auth()->user()->id)->count();
+        $enrolementValider = Enrolement::where('statut', 'validé')->where('user_id', '<>', auth()->user()->id)->count();
         $enrolements = DB::table('users')
             ->join('enrolements', 'users.id', '=', 'enrolements.user_id')
             ->select('enrolements.*', 'users.name', 'users.email')
@@ -41,6 +50,7 @@ class AdministrationController extends Controller
 
         return view('administration.index.enrolement', [
             'enrolements' => $enrolements,
+            'enrolementSoumis' => $enrolementSoumis,
             'enrolementAnnuler' => $enrolementAnnuler,
             'enrolementValider' => $enrolementValider,
             'enrolementTotal' => $enrolementTotal
@@ -84,7 +94,49 @@ class AdministrationController extends Controller
     {
         //
     }
+    // Validation des opérations
 
+    public function validerEnrolement($enrolement)
+    {
+        $enrolementFind = Enrolement::where('id', $enrolement)->get();
+        return view('administration.validation.enrolement', ['enrolements' => $enrolementFind]);
+    }
+    public function action_enrolement_validate(Request $request)
+    {
+        $filename = "";
+        if ($request->hasFile('attestation_enrolement')) {
+
+            $file = $request->file('attestation_enrolement');
+            $filename = uniqid() . '_attestation_enrolement_' . auth()->user()->name . time() . '.' . $file->getClientOriginalExtension();
+            $filePath = public_path() . '/storage';
+            $file->move($filePath, $filename);
+        }  /* */
+
+        switch ($request->input('action')) {
+
+            case 'valider':
+                // Save model
+                Enrolement::where('id', $request->id_enrolement)
+                    ->update([
+                        'statut' => 'validé',
+                        'attestation_enrolement' => $filename,
+                        'notification' => $request->notification,
+                    ]);
+                return redirect()->route('administration.index_enrolement');
+
+                break;
+
+            case 'annuler':
+
+                Enrolement::where('id', $request->id_enrolement)
+                    ->update([
+                        'statut' => 'annulé',
+                    ]);
+                return redirect()->route('administration.index_enrolement');
+
+                break;
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

@@ -1,4 +1,4 @@
-@include('header.header')
+@include('administration.index.header')
 <div class="content-page">
     <!-- Start content -->
     <div class="content">
@@ -14,48 +14,55 @@
             <div class="container-fluid">
 
                 <div class="row mt-3">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="card m-b-30">
                             <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
                             <div class="card-body">
 
-                                <p class="card-text">Total de demande d'attestation.
-                                    <span class="badge badge-primary">15</span>
+                                <p class="card-text">Total de demande d'attestation d'enrôlemnt.
+                                    <span class="badge badge-primary">{{$enrolementTotal}}</span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
+                        <div class="card m-b-30">
+                            <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
+                            <div class="card-body">
+
+                                <p class="card-text">Total attestation soumise.
+                                    <span class="badge badge-warning">{{$enrolementSoumis}}</span>
+                                </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
                         <div class="card m-b-30">
                             <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
                             <div class="card-body">
 
                                 <p class="card-text">Total attestation validée.
-                                    <span class="badge badge-success">15</span>
+                                    <span class="badge badge-success">{{$enrolementValider}}</span>
                                 </p>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="card m-b-30">
+                            <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
                             <div class="card-body">
-                                <a href="{{route('enrolement.create')}}" class="btn btn-danger">Nouvelle attestation +
+
+                                <p class="card-text">Total attestation annulée.
+                                    <span class="badge badge-danger">{{$enrolementAnnuler}}</span>
+                                </p>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                @if (session('saved'))
-                <div class="alert alert-info alert-dismissible fade show">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                            aria-hidden="true">×</span></button>
-                    <h3>Demande d'attestation d'enrôlement.</h3>
-                    <p class="text-secondary">
-                        Votre demande été envoyée avec succès.
-                    </p>
-                </div>
-                @endif
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -69,10 +76,10 @@
                                     <thead>
                                         <tr>
                                             <th>N°</th>
+                                            <th>Requerant</th>
                                             <th>Date soumission</th>
-                                            <th>Validité</th>
                                             <th>Etat</th>
-                                            <th>Start date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
 
@@ -81,22 +88,12 @@
                                         @foreach ($enrolements as $item)
                                         <tr>
                                             <td>{{$item->id}}</td>
+                                            <td>{{$item->name}}</td>
                                             <td>{{$item->created_at}}</td>
-                                            <td>{{$item->validite}}</td>
-                                            <td><span class="badge border-orange-300">{{$item->statut}}</span></td>
+                                            <td>{{$item->statut}}</td>
                                             <td>
-                                                <a href="{{route('enrolement.show',$item->id )}}"
-                                                    class="btn btn-warning">Voir </a>
-                                                <a href="{{route('enrolement.edit',$item->id )}}"
-                                                    class="btn btn-primary">Modifier </a>
-                                                <form action="{{route('enrolement.destroy',$item->id )  }}"
-                                                    method="POST" style="display:inline;">
-                                                    @method('DELETE')
-                                                    @csrf
-                                                    <button class="btn btn-danger"
-                                                        onclick="if (!confirm('Voulez-vous vraiment supprimer cet élément ?')) { return false }">Supprimer
-                                                    </button>
-                                                </form>
+                                                <a href="{{route('administration.valider_enrolement',$item->id )}}"
+                                                    class="btn btn-success"><i></i> Traiter </a>
                                             </td>
 
                                         </tr>

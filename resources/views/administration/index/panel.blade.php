@@ -20,7 +20,8 @@
                                             class="badge badge-dark badge-pill">1</span> </h5>
                                     <div class="card-body">
                                         <p class="card-text">Attestation d’enrôlement </p><a
-                                            href="{{ route('avisfavorable.create') }}" class="btn btn-danger"><i
+                                            href="{{ route('administration.index_enrolement') }}"
+                                            class="btn btn-danger"><i
                                                 class="ion ion-md-checkmark-circle-outline"></i>&nbsp; Valider
                                             l'opération
                                         </a>

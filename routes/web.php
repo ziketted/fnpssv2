@@ -111,12 +111,16 @@ Route::name('avispermanent.')->group(function () {
 Route::name('administration.')->group(function () {
     Route::get('/administration/panel', [AdministrationController::class, 'panel'])->name('panel');
     Route::get('/administration/requerant', [AdministrationController::class, 'requerant'])->name('requerant');
+    Route::get('/administration/{user}/detail', [AdministrationController::class, 'detail'])->name('detail');
     Route::get('/bienexonereradmin/index', [AdministrationController::class, 'index_bienexonerer'])->name('index_bienexonerer');
     Route::get('/enrolementadmin/index', [AdministrationController::class, 'index_enrolement'])->name('index_enrolement');
+    Route::get('/enrolementadmin/{enrolement}/valide', [AdministrationController::class, 'validerEnrolement'])->name('valider_enrolement');
     Route::get('/conventionadmin/index', [AdministrationController::class, 'index_convetion'])->name('index_convetion');
     Route::get('/exonerationadmin/index', [AdministrationController::class, 'index_exoneration'])->name('index_exoneration');
     Route::get('/philantropieadmin/index', [AdministrationController::class, 'index_philantropie'])->name('index_philantropie');
     Route::get('/avisfavorableadmin/index', [AdministrationController::class, 'index_avisfavorable'])->name('index_avisfavorable');
     Route::get('/avispermanentadmin/index', [AdministrationController::class, 'index_avispermanent'])->name('index_avispermanent');
+
+    Route::post('/validation/enrolement', [AdministrationController::class, 'action_enrolement_validate'])->name('validationEnrolement');
 });
 require __DIR__ . '/auth.php';
