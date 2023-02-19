@@ -112,15 +112,25 @@ Route::name('administration.')->group(function () {
     Route::get('/administration/panel', [AdministrationController::class, 'panel'])->name('panel');
     Route::get('/administration/requerant', [AdministrationController::class, 'requerant'])->name('requerant');
     Route::get('/administration/{user}/detail', [AdministrationController::class, 'detail'])->name('detail');
+
     Route::get('/bienexonereradmin/index', [AdministrationController::class, 'index_bienexonerer'])->name('index_bienexonerer');
+    Route::get('/bienexonereradmin/{bienexonerer}/valide', [AdministrationController::class, 'validerBienexonerer'])->name('valider_bienexonerer');
+
     Route::get('/enrolementadmin/index', [AdministrationController::class, 'index_enrolement'])->name('index_enrolement');
     Route::get('/enrolementadmin/{enrolement}/valide', [AdministrationController::class, 'validerEnrolement'])->name('valider_enrolement');
-    Route::get('/conventionadmin/index', [AdministrationController::class, 'index_convetion'])->name('index_convetion');
+
+    Route::get('/conventionadmin/index', [AdministrationController::class, 'index_convention'])->name('index_convention');
+    Route::get('/conventionadmin/{convention}/valide', [AdministrationController::class, 'validerConvention'])->name('valider_convention');
+
+
     Route::get('/exonerationadmin/index', [AdministrationController::class, 'index_exoneration'])->name('index_exoneration');
     Route::get('/philantropieadmin/index', [AdministrationController::class, 'index_philantropie'])->name('index_philantropie');
     Route::get('/avisfavorableadmin/index', [AdministrationController::class, 'index_avisfavorable'])->name('index_avisfavorable');
     Route::get('/avispermanentadmin/index', [AdministrationController::class, 'index_avispermanent'])->name('index_avispermanent');
 
+    //Valider la demande
     Route::post('/validation/enrolement', [AdministrationController::class, 'action_enrolement_validate'])->name('validationEnrolement');
+    Route::post('/validation/convention', [AdministrationController::class, 'action_convention_validate'])->name('validationConvention');
+    Route::post('/validation/bienexonerer', [AdministrationController::class, 'action_bienexonerer_validate'])->name('validationBienexonerer');
 });
 require __DIR__ . '/auth.php';

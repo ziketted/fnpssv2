@@ -17,6 +17,12 @@ class ConventionController extends Controller
     public function index()
     {
         //
+        $conventions = Convention::where('user_id',  auth()->user()->id)
+            ->orderBy('id', 'DESC')->get();
+
+        return view('services.convention.index', [
+            'conventions' => $conventions,
+        ]);
     }
 
     /**
@@ -26,7 +32,7 @@ class ConventionController extends Controller
      */
     public function create()
     {
-        //
+        return view('services.convention.create');
     }
 
     /**
@@ -90,9 +96,10 @@ class ConventionController extends Controller
      * @param  \App\Models\Convention  $convention
      * @return \Illuminate\Http\Response
      */
-    public function show(Convention $convention)
+    public function show($convention)
     {
-        //
+        $conventionFind = Convention::where('id', $convention)->get();
+        return view('services.convention.show', ['conventions' => $conventionFind]);
     }
 
     /**
@@ -127,5 +134,8 @@ class ConventionController extends Controller
     public function destroy(Convention $convention)
     {
         //
+        $convention->delete();
+        return redirect()->route('convention.index')
+            ->with('deleted', 'opération a été effectuée avec succès.');
     }
 }

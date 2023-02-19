@@ -34,7 +34,8 @@
                                             class="badge badge-dark badge-pill">2</span></h5>
                                     <div class="card-body">
                                         <p class="card-text">Convention de partenariat avec le gouvernement </p>
-                                        <a href="{{ route('avisfavorable.create') }}" class="btn btn-danger"><i
+                                        <a href="{{ route('administration.index_convention') }}"
+                                            class="btn btn-danger"><i
                                                 class="ion ion-md-checkmark-circle-outline"></i>&nbsp; Valider
                                             l'opération
                                         </a>
@@ -46,8 +47,9 @@
                                     <h5 class="card-header mt-0">Service <span
                                             class="badge badge-dark badge-pill">3</span> </h5>
                                     <div class="card-body">
-                                        <p class="card-text">Certificat d’Exonérations</p><a
-                                            href="{{ route('avisfavorable.create') }}" class="btn btn-danger"><i
+                                        <p class="card-text">Attestation des biens à exonérer</p><a
+                                            href="{{ route('administration.index_bienexonerer') }}"
+                                            class="btn btn-danger"><i
                                                 class="ion ion-md-checkmark-circle-outline"></i>&nbsp; Valider
                                             l'opération
                                         </a>
@@ -63,9 +65,8 @@
                                     <h5 class="card-header mt-0">Service <span
                                             class="badge badge-dark badge-pill">4</span></h5>
                                     <div class="card-body">
-                                        <p class="card-text">Arrêté ministériel portant avis
-                                            favorable </p><a href="{{ route('avisfavorable.create') }}"
-                                            class="btn btn-danger"><i
+                                        <p class="card-text">Certificat d’Exonérations </p><a
+                                            href="{{ route('avisfavorable.create') }}" class="btn btn-danger"><i
                                                 class="ion ion-md-checkmark-circle-outline"></i>&nbsp; Valider
                                             l'opération
                                         </a>
