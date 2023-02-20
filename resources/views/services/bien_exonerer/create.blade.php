@@ -33,7 +33,7 @@
 
                                                 <div class="form-group">
                                                     <p>Lettre au Ministre des Affaires Sociales, Action Humanitaire et
-                                                        Solidarité Nationale avec copie au Directeur/ </p>
+                                                        Solidarité Nationale avec copie au Directeur </p>
                                                     <input type="file" name="lettre" class="filestyle"
                                                         data-buttonname="btn-secondary" accept="application/pdf"
                                                         required>
@@ -94,15 +94,30 @@
                                         <div class="demo-box">
                                             <h4 class="m-t-0 m-b-30"><b>Processus à suivre.</b></h4>
                                             <hr>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, modi
-                                                iusto, exercitationem
-                                                Maiores nisi quas nesciunt odit deleniti. Repellendus beatae dicta nisi
-                                                minus sit? Pariatur hic mollitia quidem rem dolore, deleniti ipsum magni
-                                                cumque vel numquam amet non sequi enim, eveniet iure.
-                                                Voluptate quo doloremque eum? Nemo quae reiciendis saepe molestiae atque
-                                                natus quaerat ipsam fugiat ex sit reprehenderit consequuntur deleniti
-                                                similique tempore iusto, accusantium, neque, facere repellendus
-                                                recusandae obcaecati! Corporis, debitis.</p>
+                                            <p><b>L’Attestation des biens à exonérer , Les documents exigés :</b></p>
+                                            <ul>
+                                                <li>Requête adressée au Directeur Général du Fonds National de 
+                                                    Promotion<br> et de Service Social avec copie au Ministre des Affaires Sociales,<br> 
+                                                    Action Humanitaire et Solidarité Nationale</li>
+                                                <li>Copie de l’attestation d’enrôlement au FNPSS</li>
+                                                <li>Copie de la convention de partenariat avec le Gouvernement de la République Démocratique du Congo<br> 
+                                                    représenté par le Ministre des Affaires Sociales,<br> 
+                                                    Action Humanitaire et Solidarité Nationale ou toute autre convention<br> 
+                                                    signée entre l’Organisme philanthropique requérant<br> 
+                                                    et le Gouvernement dans le cadre de la mise en oeuvre des projets sociaux<br> 
+                                                    et d’assistance humanitaire ou toute autre Convention<br> 
+                                                    ou Protocole signé avec l’État congolais pour la mise en oeuvre des projets sociaux et humanitaires</li>
+                                                <li>Copie du rapport d’activités de l’année écoulée</li>
+                                                <li>Copie du projet ou programme social ou humanitaire concerné par l’exonération</li>
+                                                <li>Copie du rapport d’affectation des biens exonérés précédant la nouvelle demande et approuvé par le FNPSS</li>
+                                            </ul>
+                                            <p><b>Frais à payer et délai de traitement:</b></p>
+                                            <ul>
+                                                <li><b>L’équivalent en franc congolais de 55 $ USD</b></li>
+                                                <li><b>L’équivalent en Franc congolais de 20 $ USD comme frais de dépôt du dossier</b></li>
+                                                <li><b>Le délai de traitement par le FNPSS est de 10 jours ouvrables à dater du paiement des frais</b></li>
+                                            </ul>
+                                            
                                         </div>
                                     </div>
 

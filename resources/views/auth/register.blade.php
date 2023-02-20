@@ -1,59 +1,122 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<!doctype html>
+<html lang="en">
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+<head>
+    <meta charset="utf-8" />
+    <title>Fond National de Promotion et de Service Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="ThemeDesign" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+
+    <!-- Begin page -->
+    <div class="accountbg"></div>
+    <div class="wrapper-page">
+        <div class="card card-pages">
+
+            <div class="card-body">
+                <div class="text-center m-t-0 m-b-15">
+                    <a href="index.html" class="logo logo-admin"><img src="assets/images/fnpss.png" alt=""
+                            height="34"></a>
+                </div>
+
+                @if (session('status'))
+                <div class="mb-4 font-medium text-sm text-green-600">
+                    {{ session('status') }}
+                </div>
+                @endif
+                <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+
+                    <div class="form-group">
+                        <div class="col-12">
+                            <input type="text" name="name" value="{{old('name','') }}" class="form-control"
+                                placeholder="Nom">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-12">
+                            <input type="email" name="email" value="{{old('email','') }}" class="form-control"
+                                placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-12">
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-12">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmer le mot de passe">
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="form-group text-center m-t-40">
+                        <div class="col-12">
+                            <button class="btn btn-primary btn-block btn-lg waves-effect waves-light"
+                                type="submit">Creer le compte
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-40">
+                        <div class="col-12">
+                            <a href="{{ url('auth/google') }}"
+                                class="btn btn-danger btn-block btn-lg waves-effect waves-light" type="submit">
+                                <i class="ion ion-logo-googleplus"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-group row m-t-30 m-b-0">
+                        {{-- <div class="col-sm-7">
+                            <a href="{{ route('password.request') }}" class="text-muted"><i
+                                    class="fa fa-lock m-r-5"></i> Mot de passe oublié ?</a>
+                        </div> --}}
+                        <div class="col-sm-6 text-right">
+                            <a href="{{ route('login') }}" class="text-muted">Vous avez déjà un compte ?</a>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+        </div>
+    </div>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+    <!-- jQuery  -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/modernizr.min.js')}}"></script>
+    <script src="{{asset('assets/js/detect.js')}}"></script>
+    <script src="{{asset('assets/js/fastclick.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.blockUI.js')}}"></script>
+    <script src="{{asset('assets/js/waves.js')}}"></script>
+    <script src="{{asset('assets/js/wow.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.scrollTo.min.js')}}"></script>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+</body>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
+</html>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>

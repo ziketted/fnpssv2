@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AdministrationController;
-use TCG\Voyager\Voyager;
 use App\Models\Avisfavorable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -29,10 +28,6 @@ use App\Http\Controllers\AvispermanentController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
 
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);

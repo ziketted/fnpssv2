@@ -51,10 +51,10 @@
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="index.html" class="logo"><img src="{{asset('assets/images/logo-dark.png')}}" alt=""
-                            height="24"></a>
-                    <a href="index.html" class="logo-sm"><img src="{{asset('assets/images/logo-sm.png')}}" alt=""
-                            height="28"></a>
+                    <a href="#" class="logo"><img src="{{asset('assets/images/fnpss.png')}}" alt=""
+                            height="50"></a>
+                    <a href="#" class="logo-sm"><img src="{{asset('assets/images/fnpss.png')}}" alt=""
+                            height="50"></a>
                 </div>
             </div>
             <!-- Button mobile view to collapse sidebar menu -->
@@ -82,7 +82,7 @@
                                 data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-bell"></i> <span class="badge badge-xs badge-danger"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-lg">
+                            {{-- <ul class="dropdown-menu dropdown-menu-lg">
                                 <li class="text-center notifi-title">Notification <span
                                         class="badge badge-xs badge-success">3</span></li>
                                 <li class="list-group">
@@ -113,7 +113,7 @@
                                         <small class="text-primary mb-0">View all </small>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> --}}
                         </li>
                         <li class="d-none d-sm-block">
                             <a href="#" id="btn-fullscreen" class="waves-effect waves-light notification-icon-box"><i
@@ -132,8 +132,8 @@
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)" class="dropdown-item"> Profile</a></li>
                                 <li><a href="javascript:void(0)" class="dropdown-item"><span
-                                            class="badge badge-success float-right">5</span> Settings </a></li>
-                                <li><a href="javascript:void(0)" class="dropdown-item"> Lock screen</a></li>
+                                            class="badge badge-success float-right">5</span> Reglages </a></li>
+                                
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <form method="POST" action="{{ route('logout') }}">
@@ -141,7 +141,7 @@
 
                                         <a href="route('logout')" onclick="event.preventDefault();
                                                             this.closest('form').submit();" class="dropdown-item">
-                                            {{ __('Log Out') }}
+                                            {{ __('Deconnexion') }}
                                         </a>
                                     </form>
                                 </li>
@@ -242,8 +242,8 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
 
-                                        <p class="card-text">Attestation
-                                            d’enrôlement</p><a href="{{ route('enrolement.create') }}"
+                                        <p class="card-text"><b>Attestation
+                                            d’enrôlement</b></p><a href="{{ route('enrolement.create') }}"
                                             class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
@@ -254,9 +254,9 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
 
-                                        <p class="card-text">Convention de
+                                        <p class="card-text"><b>Convention de
                                             partenariat avec le
-                                            gouvernement</p><a href="{{ route('convention.create') }}"
+                                            gouvernement</b></p><a href="{{ route('convention.create') }}"
                                             class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
@@ -266,8 +266,8 @@
                                 <div class="card m-b-30">
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
-                                        <p class="card-text">Attestation des biens à
-                                            exonérer</p><a href="{{ route('bienexonerer.create') }}"
+                                        <p class="card-text"><b>Attestation des biens à
+                                            exonérer</b></p><a href="{{ route('bienexonerer.create') }}"
                                             class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
@@ -281,8 +281,8 @@
                                 <div class="card m-b-30">
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
-                                        <p class="card-text">Certificat
-                                            d’Exonérations</p><a href="{{ route('exoneration.create') }}"
+                                        <p class="card-text"><b>Certificat
+                                            d’Exonérations</b></p><a href="{{ route('exoneration.create') }}"
                                             class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
@@ -292,8 +292,8 @@
                                 <div class="card m-b-30">
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
-                                        <p class="card-text">Certificat de
-                                            philanthropie</p><a href="{{ route('philantropie.create') }}"
+                                        <p class="card-text"><b>Certificat de
+                                            philanthropie</b></p><a href="{{ route('philantropie.create') }}"
                                             class="btn btn-primary">Commence par ici
                                         </a>
                                     </div>
@@ -303,10 +303,10 @@
                                 <div class="card m-b-30">
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
-                                        <p class="card-text">Arrêté ministériel portant avis
+                                        <p class="card-text"><b>Arrêté ministériel portant avis
                                             favorable pour l’exonération des droits, taxes et redevances en
                                             faveur des projets sociaux et/ ou
-                                            d’assistance humanitaire à l’intérieur du pays</p><a
+                                            d’assistance humanitaire à l’intérieur du pays</b></p><a
                                             href="{{ route('avisfavorable.create') }}" class="btn btn-primary">Commence
                                             par ici
                                         </a>
@@ -322,12 +322,12 @@
                                     <h5 class="card-header mt-0">Service</h5>
                                     <div class="card-body">
 
-                                        <p class="card-text">Arrêté ministériel portant avis
+                                        <p class="card-text"><b>Arrêté ministériel portant avis
                                             favorable permanent pour
                                             l’exonération des droits, taxes et
                                             redevances en faveur des projets
                                             sociaux et/ ou d’assistance
-                                            humanitaire à l’importation</p><a href="{{ route('avispermanent.create') }}"
+                                            humanitaire à l’importation</b></p><a href="{{ route('avispermanent.create') }}"
                                             class="btn btn-primary">Commence
                                             par ici
                                         </a>

@@ -113,15 +113,31 @@
                                         <div class="demo-box">
                                             <h4 class="m-t-0 m-b-30"><b>Processus à suivre.</b></h4>
                                             <hr>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, modi
-                                                iusto, exercitationem
-                                                Maiores nisi quas nesciunt odit deleniti. Repellendus beatae dicta nisi
-                                                minus sit? Pariatur hic mollitia quidem rem dolore, deleniti ipsum magni
-                                                cumque vel numquam amet non sequi enim, eveniet iure.
-                                                Voluptate quo doloremque eum? Nemo quae reiciendis saepe molestiae atque
-                                                natus quaerat ipsam fugiat ex sit reprehenderit consequuntur deleniti
-                                                similique tempore iusto, accusantium, neque, facere repellendus
-                                                recusandae obcaecati! Corporis, debitis.</p>
+                                            <p><b>Certificat d’exonération</b></p>
+                                            <p>Le Certificat d’exonération est délivré au requérant ayant déjà bénéficié 
+                                                d’un Arrêté interministériel d’exonération Finances-Plan pour les biens disponibles à l’importation</p>
+                                            
+                                            <b>L’Attestation des biens à exonérer , Les documents exigés :</b>
+                                            <ul>
+                                                <li>Requête adressée au Directeur Général du Fonds National<br>
+                                                    de Promotion et de Service Social avec copie au Ministre des Affaires Sociales,<br> 
+                                                    Action Humanitaire et Solidarité Nationale</li>
+                                                <li>Copie de l’attestation des biens à exonérer délivré par le FNPSS</li>
+                                                <li>Copie de l’avis favorable pour exonération du Ministère sectoriel</li>
+                                                <li>Copie du Projet d’utilisation du don ou des biens acquis</li>
+                                                <li>Liste de colisage</li>
+                                                <li>Copie de la lettre de transport maritime (BL) ou aérien (L.T.A) ou terrestre</li>
+                                                <li>Copie de l’attestation de don ou la facture d’achat</li>
+                                                <li>Copie du rapport d’affectation des biens exonérés précédant la nouvelle demande et approuvé par le FNPSS</li>
+                                            </ul>
+
+                                            <p><b>Frais à payer et délai de traitement:</b></p>
+                                            <ul>
+                                                <li><b>L’équivalent en franc congolais de 55 $ USD</b></li>
+                                                <li><b>L’équivalent en Franc congolais de 20 $ USD comme frais de dépôt du dossier</b></li>
+                                                <li><b>Le délai de traitement par le FNPSS est de 8 jours ouvrable à dater du paiement des frais</b></li>
+                                            </ul>
+                                           
                                         </div>
                                     </div>
 

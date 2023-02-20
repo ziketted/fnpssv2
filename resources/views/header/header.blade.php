@@ -47,10 +47,10 @@
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="index.html" class="logo"><img src="{{asset('assets/images/logo-dark.png')}}" alt=""
-                            height="24"></a>
-                    <a href="index.html" class="logo-sm"><img src="{{asset('assets/images/logo-sm.png')}}" alt=""
-                            height="28"></a>
+                    <a href="#" class="logo"><img src="{{asset('assets/images/fnpss.png')}}" alt=""
+                            height="50"></a>
+                    <a href="#" class="logo-sm"><img src="{{asset('assets/images/fnpss.png')}}" alt=""
+                            height="50"></a>
                 </div>
             </div>
             <!-- Button mobile view to collapse sidebar menu -->
@@ -78,38 +78,7 @@
                                 data-toggle="dropdown" aria-expanded="true">
                                 <i class="fa fa-bell"></i> <span class="badge badge-xs badge-danger"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-lg">
-                                <li class="text-center notifi-title">Notification <span
-                                        class="badge badge-xs badge-success">3</span></li>
-                                <li class="list-group">
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item mt-2">
-                                        <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                        <p class="notify-details">Your order is placed<span class="text-muted">Dummy
-                                                text of the printing and typesetting industry.</span></p>
-                                    </a>
-                                    <!-- item-->
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
-                                        <p class="notify-details">Your item is shipped<span class="text-muted">It is a
-                                                long established fact that a reader will</span></p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item mb-2">
-                                        <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i>
-                                        </div>
-                                        <p class="notify-details">New Message received<span class="text-muted">You have
-                                                87 unread messages</span></p>
-                                    </a>
-
-                                    <!-- last list item -->
-                                    <a href="javascript:void(0);" class="list-group-item text-center">
-                                        <small class="text-primary mb-0">View all </small>
-                                    </a>
-                                </li>
-                            </ul>
+                           
                         </li>
                         <li class="d-none d-sm-block">
                             <a href="#" id="btn-fullscreen" class="waves-effect waves-light notification-icon-box"><i
@@ -128,8 +97,8 @@
                             <ul class="dropdown-menu">
                                 <li><a href="javascript:void(0)" class="dropdown-item"> Profile</a></li>
                                 <li><a href="javascript:void(0)" class="dropdown-item"><span
-                                            class="badge badge-success float-right">5</span> Settings </a></li>
-                                <li><a href="javascript:void(0)" class="dropdown-item"> Lock screen</a></li>
+                                            class="badge badge-success float-right">5</span> Reglages </a></li>
+                                
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <form method="POST" action="{{ route('logout') }}">
@@ -137,7 +106,7 @@
 
                                         <a href="route('logout')" onclick="event.preventDefault();
                                                             this.closest('form').submit();" class="dropdown-item">
-                                            {{ __('Log Out') }}
+                                            {{ __('Deconnexion') }}
                                         </a>
                                     </form>
                                 </li>

@@ -84,15 +84,24 @@
                                         <div class="demo-box">
                                             <h4 class="m-t-0 m-b-30"><b>Processus à suivre.</b></h4>
                                             <hr>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, modi
-                                                iusto, exercitationem
-                                                Maiores nisi quas nesciunt odit deleniti. Repellendus beatae dicta nisi
-                                                minus sit? Pariatur hic mollitia quidem rem dolore, deleniti ipsum magni
-                                                cumque vel numquam amet non sequi enim, eveniet iure.
-                                                Voluptate quo doloremque eum? Nemo quae reiciendis saepe molestiae atque
-                                                natus quaerat ipsam fugiat ex sit reprehenderit consequuntur deleniti
-                                                similique tempore iusto, accusantium, neque, facere repellendus
-                                                recusandae obcaecati! Corporis, debitis.</p>
+                                            <p><b>Les documents exigés :</b></p>
+                                            <ul>
+                                                <li>Requête adressée au Ministre des Affaires Sociales, Action Humanitaire<br> 
+                                                    et Solidarité Nationale avec copie <br> 
+                                                    au Directeur Général du Fonds National de Promotion et de Service Social (FNPSS)</li>
+                                                <li>Copie de l’attestation d’enrôlement au FNPSS</li>
+                                                <li>Copie du Plan d’Action pour l’année en cours</li>
+                                                <li>Copie du rapport annuel d’activités de l’année écoulée</li>
+                                                <li>Copie du projet ou programme social ou humanitaire concerné par le partenariat sollicité</li>
+                                            </ul>
+
+                                            <p>Frais à payer et délai de traitement:</p>
+                                            <ul>
+                                                <li><b>Frais dépôt du dossier : l’équivalent en Franc Congolais de 20 $ US</b></li>
+                                                <li><b>Frais d’enquête : l’équivalent en Franc Congolais de 300 $ US</b></li>
+                                                <li><b>Le délai de traitement par le FNPSS est de 10 jours ouvrables à dater du paiement des frais.</b></li>
+                                            </ul>
+                                    
                                         </div>
                                     </div>
 
