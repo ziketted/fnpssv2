@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Logistique</title>
+    <title>Fond National de Promotion et de Service Social</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="Admin Dashboard" name="description" />
     <meta content="ThemeDesign" name="author" />
@@ -27,8 +27,8 @@
 
             <div class="card-body">
                 <div class="text-center m-t-0 m-b-15">
-                    <a href="index.html" class="logo logo-admin"><img src="assets/images/logo-dark.png" alt=""
-                            height="34"></a>
+                    <a href="index.html" class="logo logo-admin"><img src="assets/images/fnpss.png" alt=""
+                            height="70"></a>
                 </div>
 
                 @if (session('status'))
@@ -48,7 +48,7 @@
 
                     <div class="form-group">
                         <div class="col-12">
-                            <input type="password" name="password" class="form-control" placeholder="password">
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
                         </div>
                     </div>
 
@@ -82,7 +82,7 @@
                     <div class="form-group row m-t-30 m-b-0">
                         <div class="col-sm-7">
                             <a href="{{ route('password.request') }}" class="text-muted"><i
-                                    class="fa fa-lock m-r-5"></i> Mot de passe oublié?</a>
+                                    class="fa fa-lock m-r-5"></i> Mot de passe oublié ?</a>
                         </div>
                         <div class="col-sm-5 text-right">
                             <a href="{{ route('register') }}" class="text-muted">Creer un compte</a>
@@ -93,7 +93,6 @@
 
         </div>
     </div>
-
 
 
     <!-- jQuery  -->
