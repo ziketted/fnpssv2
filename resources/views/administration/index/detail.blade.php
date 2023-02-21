@@ -5,7 +5,8 @@
 
         <div class="">
             <div class="page-header-title">
-                <h4 class="page-title">Informations sur le requerant</h4>
+                <h4 class="page-title">Informations sur le requerant
+                </h4>
             </div>
         </div>
 
@@ -27,11 +28,15 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card m-b-30">
-                            <h5 class="card-header mt-0">Attestation d'enrôlement</h5>
+                            <h5 class="card-header mt-0">Adresse</h5>
                             <div class="card-body">
 
-                                <p class="card-text">Total attestation validée.
-                                    <span class="badge badge-success">15</span>
+                                <p class="card-text">
+                                    Mobile : <br>
+                                    Email : <br>
+                                    Location : <br>
+                                    Adresse : <br>
+                                    Compte bancaire : 
                                 </p>
                                 </a>
                             </div>
@@ -39,17 +44,132 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card m-b-30">
-
+                            <h5 class="card-header mt-0">Responsable de la structure</h5>
                             <div class="card-body">
-                                <a href="{{route('avisfavorable.create')}}" class="btn btn-danger">Nouvelle attestation
-                                    +
-                                </a>
+
+                                <p class="card-text">
+                                    Nom complet : <br>
+                                    Fonction : <br>
+                                    Email :<br>
+                                    Téléphone :+2437548995
+                                </p>
+                                
                             </div>
                         </div>
                     </div>
 
 
                 </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <h5 class="card-header mt-0">Informations</h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Bénéficiaire :<br>
+                                    Projet en cours : <span class="badge-danger">Assainessement</span><br>
+                                    Impact :
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <h5 class="card-header mt-0">Informations</h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Domaine : <span class="badge-primary">Développement Communautaire</span><br>
+                                    Fournisseur : <b>Assainessement</b><br>
+                                    Rayon d'intervention :
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <h5 class="card-header mt-0">Objectifs</h5>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Statut juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Accord juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Autorisation juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Personnalité juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Convention juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="">
+                                    <img src="https://img.icons8.com/stickers/50/null/live-folder.png"/>
+                                    <b>Convention juridique</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -63,10 +183,11 @@
                                     <thead>
                                         <tr>
                                             <th>N°</th>
+                                            <th>Demande</th>
                                             <th>Date soumission</th>
-                                            <th>Expéditeur</th>
-                                            <th>Inscrit depuis</th>
-                                            <th>_</th>
+                                            <th>Type de demande</th>
+                                            <th>Etat</th>
+                                            
                                         </tr>
                                     </thead>
 
