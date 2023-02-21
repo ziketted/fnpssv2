@@ -5,7 +5,7 @@
 
         <div class="">
             <div class="page-header-title">
-                <h4 class="page-title">Administration requerant.</h4>
+                <h4 class="page-title">Informations sur le requerant</h4>
             </div>
         </div>
 
@@ -55,7 +55,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="m-b-30 m-t-0">Mes demandes </h4>
+                                <h4 class="m-b-30 m-t-0">Demandes </h4>
 
                                 <table id="datatable-buttons"
                                     class="table table-striped table-bordered dt-responsive nowrap"

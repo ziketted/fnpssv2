@@ -28,7 +28,7 @@
             <div class="card-body">
                 <div class="text-center m-t-0 m-b-15">
                     <a href="index.html" class="logo logo-admin"><img src="assets/images/fnpss.png" alt=""
-                            height="34"></a>
+                            height="70"></a>
                 </div>
 
                 @if (session('status'))

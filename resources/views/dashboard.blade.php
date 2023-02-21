@@ -66,6 +66,7 @@
                             <button class="button-menu-mobile open-left waves-light waves-effect">
                                 <i class="mdi mdi-menu"></i>
                             </button>
+
                         </li>
                         <li class="hide-phone app-search float-left">
                             <form role="search" class="navbar-form">
