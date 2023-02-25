@@ -40,6 +40,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware(['auth'])->name('profile');
+
+
 Route::name('enrolement.')->group(function () {
     Route::get('/enrolement/index', [EnrolementController::class, 'index'])->middleware(['auth'])->name('index');
     Route::get('/enrolement/pay', [EnrolementController::class, 'pay'])->middleware(['auth'])->name('pay');

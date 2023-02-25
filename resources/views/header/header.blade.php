@@ -95,7 +95,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="javascript:void(0)" class="dropdown-item"> Profile</a></li>
+                                <li><a href="{{ route('profile') }}" class="dropdown-item"> Profile</a></li>
                                 <li><a href="javascript:void(0)" class="dropdown-item"><span
                                             class="badge badge-success float-right">5</span> Reglages </a></li>
                                 
@@ -171,6 +171,12 @@
                                 <li><a href="{{route('avisfavorable.index')}}">Avis favorable</a></li>
                                 <li><a href="{{route('avispermanent.index')}}">Avis favorable permanent</a></li>
                             </ul>
+                        </li>
+
+                        <li>
+                            <a href="/" class="waves-effect"><i
+                                    class="ti-calendar"></i><span> Rentrer sur le site
+                                </span></a>
                         </li>
 
 

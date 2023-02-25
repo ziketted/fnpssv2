@@ -57,7 +57,7 @@
       </nav><!-- .navbar -->
 
       @auth
-      <a class="btn-book-a-table" href="{{ route('dashbaord') }}">Mon compte</a>
+      <a class="btn-book-a-table" href="{{ route('dashboard') }}">Mon compte</a>
       @endauth
       @guest
       <a class="btn-book-a-table" href="{{ route('login') }}">Connexion à votre compte</a>

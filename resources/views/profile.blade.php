@@ -239,113 +239,49 @@
                     </div>
                 </div>
 
-                <div class="page-content-wrapper ">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="m-b-30 m-t-0">Mon profil</h4>
 
-                    <div class="container-fluid">
-                        <br>
-                        <div class="row mt-3">
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="m-r-15">
+                                            <form action="#" method="POST" enctype="multipart/form-data">
 
-                                        <p class="card-text"><b>Attestation
-                                            d’enrôlement</b></p><a href="{{ route('enrolement.create') }}"
-                                            class="btn btn-primary">Commence par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
+                                                <div class="form-group">
+                                                    <p>Nom</p>
+                                                    <input type="text" name="nom" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <p>Email</p>
+                                                    <input type="text" name="nom" class="form-control" value="{{ Auth::user()->email }}" required>
+                                                </div>
 
-                                        <p class="card-text"><b>Convention de
-                                            partenariat avec le
-                                            gouvernement</b></p><a href="{{ route('convention.create') }}"
-                                            class="btn btn-primary">Commence par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
-                                        <p class="card-text"><b>Attestation des biens à
-                                            exonérer</b></p><a href="{{ route('bienexonerer.create') }}"
-                                            class="btn btn-primary">Commence par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                                <div class="form-group">
+                                                    <p>Mot de passe</p>
+                                                    <input type="password" name="password" class="form-control" required>
+                                                </div>
 
+                                                <div class="form-group">
+                                                    <p>Confirmez le mot de passe</p>
+                                                    <input type="password" name="confirm-password" class="form-control" required>
+                                                </div>
 
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
-                                        <p class="card-text"><b>Certificat
-                                            d’Exonérations</b></p><a href="{{ route('exoneration.create') }}"
-                                            class="btn btn-primary">Commence par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
-                                        <p class="card-text"><b>Certificat de
-                                            philanthropie</b></p><a href="{{ route('philantropie.create') }}"
-                                            class="btn btn-primary">Commence par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
-                                        <p class="card-text"><b>Arrêté ministériel portant avis
-                                            favorable pour l’exonération des droits, taxes et redevances en
-                                            faveur des projets sociaux et/ ou
-                                            d’assistance humanitaire à l’intérieur du pays</b></p><a
-                                            href="{{ route('avisfavorable.create') }}" class="btn btn-primary">Commence
-                                            par ici
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                                <button type="submit" id="sa-position"
+                                                    class="btn btn-block btn-large btn-primary ">Mettre à jour <i
+                                                        class="ion ion-md-paper-plane"></i></button>
 
-
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-lg-4">
-                                <div class="card m-b-30">
-                                    <h5 class="card-header mt-0">Service</h5>
-                                    <div class="card-body">
-
-                                        <p class="card-text"><b>Arrêté ministériel portant avis
-                                            favorable permanent pour
-                                            l’exonération des droits, taxes et
-                                            redevances en faveur des projets
-                                            sociaux et/ ou d’assistance
-                                            humanitaire à l’importation</b></p><a href="{{ route('avispermanent.create') }}"
-                                            class="btn btn-primary">Commence
-                                            par ici
-                                        </a>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                    </div><!-- container-fluid -->
-
-                </div> <!-- Page content Wrapper -->
+                    </div>
+               </div>
 
             </div>
             <!-- content -->

@@ -96,7 +96,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="javascript:void(0)" class="dropdown-item"> Profile</a></li>
+                                <li><a href="{{ route('profile') }}" class="dropdown-item"> Profile</a></li>
                                 <li><a href="javascript:void(0)" class="dropdown-item"><span
                                             class="badge badge-success float-right">5</span> Reglages </a></li>
                                 
